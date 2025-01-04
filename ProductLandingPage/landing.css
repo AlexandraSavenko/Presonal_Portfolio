@@ -1,0 +1,128 @@
+*, ::before, ::after{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+  html{font-size: 62.5%}
+  body{
+      font-family: 'Baskervville', serif;
+      position: relative; 
+  }
+  main{padding-top: 10rem;}
+  #header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  position: fixed;
+  padding: 1rem 2rem; 
+  font-size: 2rem;
+  color: linen;
+    background-color: rgb(20, 30, 40);
+  
+  }
+  #header img{
+    width: 6rem;
+    height: 6rem;
+    background-color: linen;
+    border-radius: 50%;
+    padding: 1rem;
+    overflow: visible;
+  }
+  #header nav{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  
+  }
+  nav a{
+    background-color: linen;
+    border-radius: 5px;
+    padding: 2px;
+    text-decoration: none;
+    color: rgb(20, 30, 40);
+  }
+  nav a:hover{
+    font-size: 2.5rem;
+  }
+  nav a:not(:last-child){margin-right: 4px;}
+  h1{font-size: 5rem;
+  text-align: center;
+  padding: 0.5rem;}
+  h2{text-align: center;
+  font-size: 3rem;}
+  .under-h1{font-size: 2rem;
+  text-align: end;
+  margin-right: 7%}
+  .about-us hr, .prices hr{margin: 2rem 0;}
+  .about-us ul{
+    text-align: center;
+    font-size: 2rem;
+    list-style-type: none;
+    
+  }
+  .about-us ul li{
+    background-color: linen;
+    width: 80%;
+    padding: 1rem;
+    
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+  }
+  .video-wrap{
+    width: fit-content;
+    margin: 2rem auto;
+  }
+  .prices ul{display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  list-style-type: none;
+  
+  }
+  .prices ul li{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid rgb(20, 30, 40);
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;}
+  
+  @media only screen and (min-width: 900px){
+    .prices ul{flex-direction: row;}
+    .prices ul li{width: auto;
+    padding: 2rem;
+    }
+  }
+  
+  form{ margin: 2rem auto;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: 70%;
+  font-size: 2rem;
+  background-color: linen;
+  padding: 2rem;
+  border-radius: 5px;}
+  form label{display: block;
+  border: 1px solid rgb(20, 30, 40);
+  border-radius: 5px;
+  padding: 0.5rem;}
+  form select {padding: 4px 0;
+  font-size: 2rem;}
+  form #submit{width: 20%;
+  font-size: 2rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;}
+  form #submit:hover{
+    background-color: rgb(20,30,40);
+    color: linen;
+  }
+  form input{padding: 5px;
+  font-size: 2rem;
+  border-radius: 5px;
+  display: block;
+  width: 70%;
+  }
+  
