@@ -16,7 +16,7 @@
     header{
       position: fixed;
       top: 0;
-     background-color: black;
+     background-color: #2f0000;
      width: 100%;
      padding: 1rem;
      z-index: 1;
@@ -29,7 +29,7 @@
     justify-content: flex-end;
     }
     .navbar a{
-      color: white;
+      color: #cbb19b;
       font-size: 1.5rem;
     }
     .navbar a:hover{
@@ -38,13 +38,14 @@
     #welcome-section{
       width: 100%;
       height: 100vh;
-      background-color: linen;
+      background-color: #bd977c;
     }
     .container{
       padding: 25% 10%;
       position: relative;
     }
     #welcome-section h1{
+        color: #2f0000;
       font-size: 3rem;
       width: 100%;
       text-align: end;
@@ -58,6 +59,7 @@
       display: flex;
       justify-content: flex-end;
       margin-top: 1rem;
+      width: fit-content;
     }
     .welcome-section-list li{
      
@@ -68,109 +70,13 @@
      .welcome-section-list img:hover{
        width: 120%;
      }
-    .cat{
-    width: 30%;
-    height: 40%;
-    position: absolute;
-    top: 400px}
-    .cat-head{
-      width: 150px;
-      height: 150px;
-      border-radius: 70px 70px 30px 30px;
-      background: linear-gradient(30deg, black, gray);position: absolute;
-      top: 15px;
-      z-index: 3;}
-      .ear{
-        width: 60px;
-        height: 60px;
-        background-color: black;
-        position: absolute;
-        top: 0;
-      }
-      .ear.right{
-        border-radius: 0px 70px 0px 0px;
-        transform: rotate(-10deg)
-      }
-      .ear.left{
-        border-radius: 70px 0px 0px 0px;
-        left: 90px;
-        transform: rotate(10deg)
-      }
-      
-      .cat-eye-left, .cat-eye-right{
-        background-color: white;
-        width: 60px;
-        height: 60px;
-        left: 10px;
-        border-radius: 60px 50px 40px 40px;
-        position: absolute;
-        top: 30px;
-        padding: 10px
-      }
-      .cat-eye-right{
-        left: 70px;
-        border-radius: 50px 60px 40px 40px;
-      }
-      .cat-eye-inner{
-        width: 40px;
-        height: 40px; 
-        background-color: black;
-        border-radius: 50%;
-      }
-      .cat-nose{
-        width: 20px;
-        height: 20px;
-        background-color: pink;
-        position: absolute;
-        left: 60px;
-        top: 80px;
-        border-radius: 5px 5px 70px 70px
-      }
-      .cat-body{
-        width: 80px;
-        height: 100px;background-color: black;
-    position: absolute;
-    top: 150px;
-    left: 35px;
-      }
-      .cat-neck{
-        width: 50px;
-        height: 30px;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 20%;
-    border-radius: 50px;
-    filter: blur(5px);
-    z-index: 2;
-      }
-      .cat-paw{
-        width: 60px;
-        height: 60px;
-    background-color: black;
-        position: absolute;
-        top: 40px;
-        
-      }
-      .cat-paw.left{
-            left: -20px;
-            border-radius: 50px 0 0 0;
-      }
-      .cat-paw.right{
-    left: 40px;
-    border-radius: 0 50px 0 0;
-    background: linear-gradient(240deg, gray, black)}
-     
-    .tail{
-      width: 20px;
-      height: 200px;
-      position: absolute;
-      top: 40px;
-      left: 150px;
-      transform: rotate(30deg) skewX(20deg);
-    }
+    
     #projects{
        height: 100vh;
+       background-color: #9b7960;
+       }
+       #projects h2{
+        color: #2f0000;
        }
      #projects ul{border: 1px solid;
      display: flex;
@@ -208,8 +114,7 @@
      }
     #my-contacts img{max-width: 100%;}
     
-    .container ul{padding: 1rem;
-    border: 1px solid white}
+    .container ul{padding: 1rem;}
     .container ul li{
       text-align: center;
       width: 70px;
@@ -225,6 +130,14 @@
     @media only screen and (min-width: 900px){
       .container{
       padding: 10%;
+      top: 100px;
     }
+    header{
+        padding: 2rem;
+    }
+    #navbar{
+        top: 1rem;
+    }
+    #welcome-section h1{font-size: 4rem;}
     }
     
