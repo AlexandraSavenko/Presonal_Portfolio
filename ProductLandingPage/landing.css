@@ -34,10 +34,10 @@
     justify-content: flex-end;
   
   }
-  nav a{
+  header a, nav a{
     background-color: linen;
     border-radius: 5px;
-    padding: 2px;
+    padding: 10px;
     text-decoration: none;
     color: rgb(20, 30, 40);
   }
