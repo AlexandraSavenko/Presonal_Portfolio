@@ -72,7 +72,7 @@ Aplication form          </a>
       </section>
        <section id="client-form" class="client-form">
          <h2>Application Form</h2>
-         <form id="form" action="https://www.freecodecamp.com/email-submit">
+         <form id="form">
            <label for="name">Enter your full Name:<input id="name" type="text" placeholder="Norman Human"/></label>
            <label for="email">Enter your email:<input id="email" type="email" name="email" placeholder="HumanfromEarth@gmail.com" /></label>
            <label for="phone">Enter your phone number:<input id="phone" type="phone" placeholder="+42(80)"/></label>
@@ -82,19 +82,30 @@ Aplication form          </a>
              <option value="b">Business class</option>
              <option value="f">First class</option>
            </select>
-           <input type="submit" id="submit" value="Submit" />
+           <button type="button" id="submit" >Submit</button>
          </form>
        </section>
     </main>
-    <div class="modal-back"><modal>
+    <div class="modal-back" id="modal-back">
+      <modal id="modal">
       <div>
-        <button id="close-modal" class="close">X</button>
+        <button id="close-modal" type="button" class="close">X</button>
       <p>Thank you for your order! You are a very inportant client for us! As soon as the crossuniverse flights are invented, we will contact you!</p>
     <a href="../index.html">Go back!</a>
   </div>
     </modal></div>
     <script>
+      const modalBack = document.getElementById("modal-back")
+      const modal = document.getElementById("modal")
       const closeModal = document.getElementById("close-modal")
+      const submitBtn = document.getElementById("submit")
+      submitBtn.addEventListener("click", () => {
+        modalBack.style.display="block";
+        modal.style.display = "block"});
+        closeModal.addEventListener("click", () => {
+          modalBack.style.display="none";
+        modal.style.display = "none"
+        })
     </script>
   </body>
 </html>
