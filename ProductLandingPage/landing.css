@@ -169,10 +169,12 @@
 
   }
   .close {
+    display: block;
+    margin-left: auto;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    /* border-radius: 50%; */
   }
   
   .close:hover,
