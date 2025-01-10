@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CSS</title>
+    <link rel="stylesheet" href="./techDoc.css"/>
+  </head>
+  <body>
+        <nav id="navbar">
+        
+        <header class="page-title">CSS</header>
+      <div class="navlinks">
+        <a class="nav-link" href="#color_palette">Color Palette</a>
+        <a class="nav-link" href="#box_model">Box model</a>
+        <a class="nav-link" href="#flex_box">Flex box</a>
+        <a class="nav-link" href="#grid">Grid</a>
+        <a class="nav-link" href="#responsive_design">Responsive design</a>
+        <a href="../index.html">Go Back</a>
+        </div></nav>
+       <main id="main-doc">
+            <section id="color_palette" class="main-section">
+        <header class="section-title">Color Palette</header>
+      <p class="section-p">CSS offers a range of ways to define colors. By combining them, you can create a consistent and visually appealing color palette for your site.</p>
+      <ul class="section-list">Different Approaches to Defining Color:
+  <li class="section-list-item">named colors</li>
+  <li class="section-list-item">hex codes</li>
+  <li class="section-list-item">RGB</li>
+  <li class="section-list-item">HSL</li>
+  <li class="section-list-item">the rgba() function for transparency</li>
+  </ul>
+      <p class="section-p">Using variables in CSS (e.g., --primary-color) allows you to define a color once and use it across different elements, making updates simple and enhancing your design consistency. Tools like color pickers can also help create harmonious palettes and ensure accessible color contrast.</p>
+
+      </section>
+      <section id="box_model" class="main-section"><header class="section-title">Box model</header>
+       <p class="section-p">The CSS box model defines the layout and space that each HTML element occupies, including content, padding, border, and margin. Understanding the box model is essential for controlling spacing, as it determines how elements are sized and positioned.</p>
+       <p class="section-p">In HTML, block elements and inline elements behave differently in terms of layout. A block element (like <code class="code-el">div</code>, <code class="code-el">section</code> or <code class="code-el">p</code>) takes up the full width available, creating a new line before and after itself, making it ideal for structuring larger sections of content. On the other hand, an inline element (like <code class="code-el">span</code> or <code class="code-el">img</code>) only takes up as much width as its content requires, allowing it to sit within other content without disrupting the flow. Combining block and inline elements effectively can help structure your webpage content for better readability and style.</p>
+      <p class="section-p">When setting width and height, keep in mind that padding and borders can increase the overall size unless you use box-sizing: border-box;. This makes it easier to set dimensions precisely, as padding and borders are included within the width and height you define.</p></section>
+      <section id="flex_box" class="main-section"><header class="section-title">Flex box</header>
+       <p class="section-p">Flexbox is a CSS layout module designed for aligning and distributing space within a container, even if the size of items is unknown. With properties like justify-content, align-items, and flex-wrap, flexbox provides control over the alignment and spacing of elements in a row or column.</p>
+      <p class="section-p">Flexbox is especially useful for one-dimensional layouts (either row or column), making it easy to create responsive, centered, and evenly spaced layouts without complex CSS hacks. It is widely used for building navigation bars, card layouts, and simple grid structures.</p></section>
+      <section id="grid" class="main-section"><header class="section-title">Grid</header>
+       <p class="section-p">CSS Grid Layout is a two-dimensional system that allows for more complex and organized layouts, ideal for page structures with rows and columns. Using grid-template-columns and grid-template-rows, you can define flexible layouts and control the placement of items within a container.
+</p>
+      <p class="section-p">
+CSS Grid provides precise control over positioning, making it excellent for creating intricate designs without extensive HTML markup. Combining it with flexbox, where flex handles components and grid handles sections, allows for highly flexible and structured designs.</p></section>
+      <section id="responsive_design" class="main-section"><header class="section-title">Responsive Design</header>
+       <p class="section-p">Responsive design is the practice of making a website visually appealing and functional on all screen sizes, from mobile to desktop. CSS features like media queries (@media), flexible layouts, and percentage-based dimensions allow developers to adjust designs based on screen size.
+</p>
+      <p class="section-p">
+A responsive approach ensures that elements resize, rearrange, or hide depending on the device, enhancing user experience. By designing mobile-first, you create a solid base that scales up to larger devices, ensuring accessibility and usability for a wide audience.</p></section>
+          </main>
+  </body>
+</html>
