@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Order Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <header>
+        <a href="../index.html">Go Back</a>
+    </header>
+    <h1 id="title">Order your robot-dog now!</h1>
+    <p id="description">In this form you make a robot-dog design of your own choice and within three days you'll be a happy owner of the pet of your dream. Forget about cleaning after your dog. From now on your dog will clean after you!</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal information</legend>
+      <label id="name-label" for="name">Enter your full name:<input id="name" type="text" placeholder="Alex Cool" required/></label>
+       <label id="email-label" for="email">Enter your email:<input id="email" type="email" placeholder="AlexCooool@mail.com" required/></label>
+        <label id="number-label" for="number">Enter your age:<input id="number" type="number" min="6" max="100" placeholder="30" required/></label>
+      </fieldset>
+      <fieldset>
+        <legend>Dog design</legend>
+        <label for="dropdown">Your dog's style:
+          <select id="dropdown">
+          <option value="">select one</option>
+          <option value="1">techno</option>
+          <option value="2">fluffy</option>
+          <option value="3">shaggy</option>
+        </select>
+        </label>
+        <label for="barking"><input id="barking" type="radio" value="barking" name="communication-style"/>barking</label>
+        <label for="talking"><input id="talking" type="radio" value="talking" name="communication-style" checked/>talking</label>
+       
+      </fieldset>
+      <fieldset>
+        <legend>Choose optional additional features</legend>
+        <label for="vac"><input id="vac" value="vaccuum-cleaning-system"  type="checkbox"/>Vaccuum cleaning system</label>
+       <label for="alarm"><input id="alarm" value="alarm-clock" type="checkbox"/>Alarm clock</label>
+       <label for="nav"><input id="nav" value="navigation-system" type="checkbox"/>Navigation-system</label>
+       <label for="music"><input id="music" value="music-player" type="checkbox"/>Music player</label>
+      </fieldset>
+      <fieldset>
+        <p>You can write any additional information for our designer:</p>
+        <label for="dog-bio"><textarea id="dog-bio" rows="4" cols="40" placeholder="The dog of my dream is..."></textarea></label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
