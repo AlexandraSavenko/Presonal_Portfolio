@@ -10,18 +10,24 @@ body{width: 100%;
     .header{
         position: fixed;
         width: 100vw;
-        padding: 15px;
+        padding: 5px;
         background-color: gray;
     }
     .header a {
         color: white;
         text-decoration: none;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        background-color: #1b1b32;
+        padding: 10px;
+        border-radius: 5px;
     }
-    #container{background-color: black;}
     .container{
+        background-color: black;
         width: 600px;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 20px;
     }
     p{margin: 1em auto;
     text-align: center;
