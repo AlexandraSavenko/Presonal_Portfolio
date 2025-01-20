@@ -45,23 +45,22 @@
         
               </section>
               <section id="projects">
-                <div class="container">
-                <h2>My Portfolio</h2>
+                <div class="swiper-container">
+                <!-- <h2>My Portfolio</h2> -->
                 <div class="swiper">
                   <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><h3 class="project-title">Survey Form Page</h3>
+                    <div class="swiper-slide">
                       <a id="profile-link" href="./SurveyFormPage/survey.html" target="_blank">
                         <img src="./img/SurveyImg.jpg" alt="" >
                       </a></div>
-                    <div class="swiper-slide"><h3 class="project-title">Technical Documentation Page</h3>
+                    <div class="swiper-slide">
                         
                       <a id="profile-link" href="./TechnicalDocPage/techDoc.html" target="_blank">
                         <img src="" alt="" >
                       </a></div>
-                    <div class="swiper-slide"><h3 class="project-title">Project Landing Page</h3>
-                   
+                    <div class="swiper-slide">
                       <a id="profile-link" href="./ProductLandingPage/landing.html"target="_blank"> <img src="" alt="" >
                       </a></div>
                     ...
@@ -105,6 +104,10 @@
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     // direction: 'vertical',
+    effect: "cube",
+    cubeEffect: {
+shadow: true,
+    },
      loop: true,
   
     // If we need pagination

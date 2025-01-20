@@ -23,7 +23,7 @@
      background-color: #2f0000;
      width: 100%;
      padding: 1rem;
-     z-index: 1;
+     z-index: 999;
     }
     #navbar{position: fixed;
     top: 0;}
@@ -74,9 +74,12 @@
      .welcome-section-list img:hover{
        width: 120%;
      }
+     .swiper-container {
+padding-top: 60px;
+     }
      .swiper {
-      width: 600px;
-      height: 300px;
+      width: 100%;
+      height: 90%;
     }
     #projects{
        height: 100vh;
