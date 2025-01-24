@@ -1,8 +1,8 @@
-function maxProduct(numbers, size){
-const sortedArr = numbers.sort((a, b) => b - a).slice(0, size)
-let acc = 1;
-sortedArr.map(el => acc *= el)
-return acc
+function bmi(weight, height) {
+  const bmi = (weight / height**2).toFixed(5);
+  console.log(bmi)
+  const res = bmi <= 18.5 ? "Underweight" : bmi <= 25 ? "Normal" : bmi <= 30 ? "Overweight" : "Obese"
+  return [res, `For weight = ${weight} and height = ${height}"`];
 }
-console.log(maxProduct([4, 3, 5], 2))
-console.log(maxProduct([10, 8, 7, 9], 3))
+console.log(bmi(86.7, 1.7))
+console.log(bmi(74, 2.00))
