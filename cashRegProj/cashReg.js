@@ -1,9 +1,18 @@
 let price = 19.5;
-let cid = [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]
+let cid = [
+["PENNY", 1.01], 
+["NICKEL", 2.05], 
+["DIME", 3.1], 
+["QUARTER", 4.25], 
+["ONE", 90], 
+["FIVE", 55], 
+["TEN", 20], 
+["TWENTY", 60], 
+["ONE HUNDRED", 100]
 ];
-const change = document.getElementById("change-due");
-const cash = document.getElementById("cash");
-const sale = document.getElementById("purchase-btn");
+const changeInfo = document.getElementById("change-due");
+const input = document.getElementById("cash");
+const purchaseBtn = document.getElementById("purchase-btn");
 const viewPrice = document.getElementById("price")
 
 viewPrice.textContent = price;
@@ -19,65 +28,69 @@ viewPrice.textContent = price;
   ['TWENTY', 20],
   ['ONE HUNDRED', 100]
 ];
-sale.addEventListener("click", () => {
-  const cashValue = parseFloat(cash.value);
-  const changeDue = cashValue - price;
 
-  if(cashValue < price){
+
+function countCashInDrawer (){
+const cashInDrawer = cid.reduce((acc, el)=> {
+    return acc += el[1]
+}, 0)
+return parseFloat(cashInDrawer.toFixed(2))
+}//end of countCashInDrawer
+
+function purchase (){
+    const result = {status: "",
+        change: []
+    };
+    let cashInDrawer = countCashInDrawer();//335.41  (354.91)
+  inputValue = Number(input.value);
+
+  rest = parseFloat((inputValue - price).toFixed(2));
+   if(inputValue < price){
     alert("Customer does not have enough money to purchase the item")
-    return;
+  return;
   }
-  if(cashValue === price){
-    change.innerText = "No change due - customer paid with exact cash"
-    return;
-  }
-  const changeResult = getChange(changeDue, cid);
-
-  if(changeResult.status === "INSUFFICIENT_FUNDS" || changeResult.status === "CLOSED"){
-change.innerText = `Status: ${changeResult.status} ${formatChange(changeResult.change)}`
-  }else{
-    let changeText = `Status: OPEN ${formatChange(changeResult.change)}`
-    change.innerText = changeText;
-  }
-  
-})
-
-const getChange = (changeDue, cid) =>{ 
-  const totalCid = parseFloat(cid.reduce((sum, [_, amount]) => sum + amount, 0).toFixed(2))
-
-  if(totalCid < changeDue){
-    return {status: "INSUFFICIENT_FUNDS", change: []}
-  }
-  let changeArray = [];
-  let remainingChange = changeDue;
-
-  for(let i = currencyUnits.length - 1; i >= 0; i --){
-let unit = currencyUnits[i][0];
-let unitValue = currencyUnits[i][1];
-let unitInDrawer = cid[i][1];
-
-if(unitValue <= remainingChange && unitInDrawer > 0){
-  let amountFromUnit = 0;
-  while (remainingChange >= unitValue && unitInDrawer > 0){
-    remainingChange = (remainingChange - unitValue).toFixed(2)
-    unitInDrawer -= unitValue;
-    amountFromUnit += unitValue
-  }
-
-if(amountFromUnit > 0){
-  console.log(amountFromUnit)
-  changeArray.push([unit, amountFromUnit])}
+if(rest > cashInDrawer){
+  changeInfo.textContent = "Status: INSUFFICIENT_FUNDS"
+  return;
+}
+if(rest === 0){
+  changeInfo.textContent = "No change due - customer paid with exact cash"
+  return;
 }
 
-  }//end of for loop
-  
-  if(remainingChange > 0){
-    return {status: "INSUFFICIENT_FUNDS", change: []}
-  }
-  if(changeDue === totalCid){
-    return {status: "CLOSED", change: changeArray}
-  }
-  return {status: "OPEN", change: changeArray}
- }
+for (let i = currencyUnits.length - 1; i >= 0; i--){
 
- const formatChange = changeArray => changeArray.map(([unit, amount]) => `${unit}: $${amount.toFixed(2)}`).join(" ");
+  let currencyUnitName = currencyUnits[i][0];
+  let currencyUnit = currencyUnits[i][1]
+  let currencyInDrawer = cid[i][1]
+  console.log(currencyUnitName)
+  if(rest >= currencyUnit && currencyInDrawer > 0){
+ let amountOfUnits = 0;
+
+  while(rest >= currencyUnit && currencyInDrawer > 0){
+
+    rest -= currencyUnit;
+    rest = parseFloat(rest.toFixed(2))
+ currencyInDrawer -= currencyUnit;
+    amountOfUnits += currencyUnit;
+    cashInDrawer -= currencyUnit;
+  }//end of while loop
+  console.log(amountOfUnits)
+  if(amountOfUnits > 0){
+result.change.push([currencyUnitName, parseFloat(amountOfUnits.toFixed(2))])
+  }
+
+  }
+}//end of for loop
+cashInDrawer.toFixed(2) === 0 ? result.status = "OPEN" : result.status = "CLOSED"
+console.log(result)
+
+let formText = (status, changeArr) => changeArr.map(([unit, amount]) => `Status: ${status} ${unit}: $${Number(amount)}`).join(" ")
+
+//const resultText = formText(cashInDrawer? "OPEN" : "CLOSE", changeArr)
+
+}
+  
+purchaseBtn.addEventListener("click", ()=> {
+    purchase()
+})

@@ -125,6 +125,33 @@ padding-top: 60px;
       overflow: visible;
     }
     
+    footer{
+      background-color: antiquewhite;
+      height: 100vh;
+      width: 100vw;
+      padding: 10px;
+    }
+    .city-container{
+margin: 10% auto; 
+width: 700px;
+      height: 400px;
+      border: 1px solid black;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+    .bb{
+      border: 1px solid black;
+      width: 15%;
+      height: 300px;
+      background-color: black;
+    }
+    .bb2, .bb4 {
+      height: 320px;
+    }
+    .bb3{
+      height: 350px;;
+    }
     @media only screen and (min-width: 900px){
       .container{
       padding: 10%;
