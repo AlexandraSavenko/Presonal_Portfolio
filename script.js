@@ -1,8 +1,18 @@
-function bmi(weight, height) {
-  const bmi = (weight / height**2).toFixed(5);
-  console.log(bmi)
-  const res = bmi <= 18.5 ? "Underweight" : bmi <= 25 ? "Normal" : bmi <= 30 ? "Overweight" : "Obese"
-  return [res, `For weight = ${weight} and height = ${height}"`];
+function convert (n, x){
+const numberLines = []
+const pifArr = []
+for(let i = 1; i <= n; i++){
+  numberLines.push(i)
 }
-console.log(bmi(86.7, 1.7))
-console.log(bmi(74, 2.00))
+for(const num of numberLines){
+  for(let i = 1; i <=n; i++){
+pifArr.push(i * num)
+  }
+}
+const result = pifArr.reduce((acc, el) => {if(el === x){acc += 1} return acc}, 0)
+console.log(result)
+}
+convert(6, 12)
+
+//1 2 3 4 5
+//2 4 6 
