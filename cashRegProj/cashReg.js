@@ -89,13 +89,10 @@ result.change.push([currencyUnitName, parseFloat(amountOfUnits.toFixed(2))])
 }//end of for loop
 
 
-let formText = (status, changeArr) => changeArr.map(([unit, amount]) => `Status: ${status} ${unit}: $${Number(amount)}`).join(" ")
-
-//const resultText = formText(cashInDrawer? "OPEN" : "CLOSE", changeArr)
 createRestMessage(result)
 }
   
 purchaseBtn.addEventListener("click", ()=> {
     purchase()
+    input.value = ""
 })
-//console.log(cashInDrawer.toFixed(2) === 0)
