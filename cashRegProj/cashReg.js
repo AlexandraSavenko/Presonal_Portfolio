@@ -1,14 +1,23 @@
-let price = 19.5;
+let price = 3.26;
 let cid = [
-["PENNY", 1.01], 
-["NICKEL", 2.05], 
-["DIME", 3.1], 
-["QUARTER", 4.25], 
-["ONE", 90], 
-["FIVE", 55], 
-["TEN", 20], 
-["TWENTY", 60], 
-["ONE HUNDRED", 100]
+    // ["PENNY", 1.01], 
+    // ["NICKEL", 2.05], 
+    // ["DIME", 3.1], 
+    // ["QUARTER", 4.25], 
+    // ["ONE", 90], 
+    // ["FIVE", 55], 
+    // ["TEN", 20], 
+    // ["TWENTY", 60], 
+    // ["ONE HUNDRED", 100]
+    ["PENNY", 0.04], 
+  ["NICKEL", 0], 
+  ["DIME", 0.2], 
+  ["QUARTER", 0.5], 
+  ["ONE", 1], 
+  ["FIVE", 1], 
+  ["TEN", 0], 
+  ["TWENTY", 0], 
+  ["ONE HUNDRED", 0]
 ];
 const changeInfo = document.getElementById("change-due");
 const input = document.getElementById("cash");
@@ -38,7 +47,8 @@ return parseFloat(cashInDrawer.toFixed(2))
 }//end of countCashInDrawer
 
 function createRestMessage ({status, change}) {
-    changeInfo.textContent = `Status: ${status} ${change.flat().join(" ")}`
+   let restMessage = change.map(([name, amount]) => `${name}: $${amount}`).join(" ")
+    changeInfo.textContent = `Status: ${status} ${restMessage}`
 }
 
 function purchase (){
@@ -46,9 +56,10 @@ function purchase (){
         change: []
     };
     let cashInDrawer = countCashInDrawer();//335.41  (354.91)
-  inputValue = Number(input.value);
+  const inputValue = Number(input.value);
 
-  rest = inputValue - price;
+  let rest = inputValue - price;
+  const restAmount = rest;
 
 rest === cashInDrawer ? result.status = "CLOSED" : result.status = "OPEN"
 
@@ -80,13 +91,18 @@ for (let i = currencyUnits.length - 1; i >= 0; i--){
  currencyInDrawer -= currencyUnit;
     amountOfUnits += currencyUnit;
     cashInDrawer -= currencyUnit;
+    console.log(`rest: ${rest} changeDue: ${inputValue - price} amountOfUnits: ${amountOfUnits}`)
   }//end of while loop
+
   if(amountOfUnits > 0){
 result.change.push([currencyUnitName, parseFloat(amountOfUnits.toFixed(2))])
   }
 
   }
 }//end of for loop
+if(rest > 0){
+    return {status: "INSUFFICIENT_FUNDS", change: []}
+  }
 
 
 createRestMessage(result)
