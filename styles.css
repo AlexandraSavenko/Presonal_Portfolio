@@ -11,6 +11,7 @@
       --flat-white: #cbc19b;
       --orange: orangered;
       --black: black;
+      --dark-grey: rgb(47, 44, 44);
       --grey: grey;
       --window-color: rgb(232, 232, 93);
     }
@@ -128,7 +129,13 @@ padding-top: 60px;
     }
     
     footer{
-      background-color: antiquewhite;
+     background: linear-gradient(
+      black,
+      black 40%,
+      red,
+      black 60%,
+      black 100%
+     );
       height: 100vh;
       width: 100vw;
       padding: 10px;
@@ -151,7 +158,7 @@ width: 700px;
     .bb{
       width: 15%;
       height: 300px;
-      background-color: black;
+      background-color: var(--dark-grey);
       padding: 20px 10px;
       display: flex;
       flex-wrap: wrap;
@@ -183,6 +190,20 @@ width: 700px;
       width: 15%;
       height: 200px;
       background-color: grey;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--grey),
+        var(--grey) 15%,
+        transparent 15%,
+        transparent 30%
+      ),
+      repeating-linear-gradient(
+        var(--grey),
+        var(--grey) 10%,
+        var(--window-color) 10%,
+        var(--window-color) 20%
+
+      )
     }
     .fb2, .fb4{
       height: 230px;
