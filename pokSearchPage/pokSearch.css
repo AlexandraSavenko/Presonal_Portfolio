@@ -1,9 +1,22 @@
+
+body{
+    background: linear-gradient(
+        #33ccff,
+        #ff99cc
+    );
+}
 header{
     background-color: black;
     padding: 10px;
 }
+
 .img-box{    
     height: 200px;
     width: 200px;
     border: 1px solid black;
+}
+.img-box img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
 }
