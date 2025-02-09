@@ -20,6 +20,18 @@
           <li><a href="#my-contacts">My contacts</a></li>
         </ul>
       </nav>
+      <ul class="my-contacts">
+        <li>
+          <a href="https://ua.linkedin.com/">
+            <img class="linkedin-logo" src="https://www.svgrepo.com/show/448234/linkedin.svg" alt=""/></a>
+        </li>
+         <li>
+          <a href="https://github.com/AlexandraSavenko"><img class="github-logo"  src="https://www.svgrepo.com/show/501210/github.svg" alt=""/></a>
+        </li>
+         <li>
+          <a href="+380977155733"><img class="phone" src="https://www.svgrepo.com/show/369484/phonecall-receive.svg" alt="github-logo"/></a>
+                            </li>
+      </ul>
     </header>
     <main>
       <section id="welcome-section">
@@ -53,52 +65,46 @@
                     <!-- Slides -->
                     <div class="swiper-slide">
                       <a id="profile-link" href="./SurveyFormPage/survey.html" target="_blank">
-                        <img src="./img/SurveyImg.jpg" alt="survey form page" >
+                        Survey Form Project
                       </a></div>
+                      <div class="swiper-slide">
+                        <a id="profile-link" href="./tributePage/tributePage.html" target="_blank">
+                        Tribute Page
+                        </a></div>
                     <div class="swiper-slide">
-                        
                       <a id="profile-link" href="./TechnicalDocPage/techDoc.html" target="_blank">
-                        <img src="./img/techDoc.jpg" alt="technical documentation page" >
-                      </a></div>
+                        Technical Documentation Project
+                      </a>
+                  </div>
                     <div class="swiper-slide">
-                      <a id="profile-link" href="./ProductLandingPage/landing.html"target="_blank"> <img src="" alt="" >
+                      <a id="profile-link" href="./ProductLandingPage/landing.html"target="_blank"> 
+                        Product Landing Project
                       </a></div>
                       <div class="swiper-slide">
                         <a id="profile-link" href="./cashRegProj/cashReg.html" target="_blank">
-                          <img src="./img/SurveyImg.jpg" alt="" >
+                         Cash Regester Project
                         </a></div>
+                        <div class="swiper-slide">
+                          <a id="profile-link" href="./pokSearchPage/pokSearch.html" target="_blank">
+                           Pokemon Search Project
+                          </a></div>
                     ...
                   </div>
                   <!-- If we need pagination -->
                   <div class="swiper-pagination"></div>
                 
                   <!-- If we need navigation buttons -->
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <!-- <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div> -->
                 
                   <!-- If we need scrollbar -->
-                  <div class="swiper-scrollbar"></div>
+                  <!-- <div class="swiper-scrollbar"></div> -->
                 </div> 
                 <!-- end of swiper -->
                 
                </div>
               </section>
               <section id="my-contacts">
-                <div class="container">
-                <h2>My Contacts</h2>
-                <p>Feel free to contact me if you have any business to me, or if you need a friend</p>
-                <ul>
-                  <li>
-                    <a href="https://ua.linkedin.com/"><img class="linkedin-logo" src="https://www.svgrepo.com/show/448234/linkedin.svg" alt=""/></a>
-                  </li>
-                   <li>
-                    <a href="https://github.com/AlexandraSavenko"><img class="github-logo"  src="https://www.svgrepo.com/show/501210/github.svg" alt=""/></a>
-                  </li>
-                   <li>
-                    <a href="+380977155733"><img class="phone" src="https://www.svgrepo.com/show/369484/phonecall-receive.svg" alt="github-logo"/></a>
-                                      </li>
-                </ul>
-                </div>
               </section>
     </main>
     <footer>
@@ -163,28 +169,27 @@
 <script>
   const swiper = new Swiper('.swiper', {
     // Optional parameters
-    // direction: 'vertical',
-    effect: "cube",
-    cubeEffect: {
-shadow: true,
-    },
+
      loop: true,
-  
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
     },
   
     // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
   
     // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
   });
 </script>
   </body>
