@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
-">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+"> -->
     <link rel="stylesheet" href="./styles.css"/>
 
   </head>
@@ -54,43 +54,81 @@
         </div>
               </section>
               <section id="projects">
-                <div class="container text-center">
+                <div class="container">
               <h2>My Portfolio</h2>
-              <div class="row">
-                <div class="col">
-                  <a id="profile-link" href="./SurveyFormPage/survey.html" target="_blank">
-                    Survey Form Project
-                  </a>
-                </div>
-                <div class="col">
-                  <a id="profile-link" href="./tributePage/tributePage.html" target="_blank">
-                    Tribute Page
+              <ul class="proj-list" id="proj-list">
+                <li>
+                  <div class="proj-info">
+                    <a id="profile-link" href="./SurveyFormPage/survey.html" target="_blank">
+                      Survey Form Project
                     </a>
-                </div>
-                <div class="col"><a id="profile-link" href="./TechnicalDocPage/techDoc.html" target="_blank">
-                  Technical Documentation Project
-                </a></div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <a id="profile-link" href="./ProductLandingPage/landing.html"target="_blank"> 
+                  </div>
+                  <div class="proj-img"></div>
+                </li>
+                <li>
+                  <div class="proj-info">
+                    <a id="profile-link" href="./tributePage/tributePage.html" target="_blank">
+                      Tribute Page
+                      </a>
+                  </div>
+                  <div class="proj-img"></div>
+                </li>
+                <li>
+                  <div class="proj-info"><a id="profile-link" href="./TechnicalDocPage/techDoc.html" target="_blank">
+                    Technical Documentation Project
+                  </a></div>
+                  <div class="proj-img"></div>
+                </li>
+                <li>
+                  <div class="proj-info"><a id="profile-link" href="./ProductLandingPage/landing.html"target="_blank"> 
                     Product Landing Project
-                  </a>
-                </div>
-                <div class="col">
-                  <a id="profile-link" href="./cashRegProj/cashReg.html" target="_blank">
+                  </a></div>
+                  <div class="proj-img"></div>
+                </li>
+                <li>
+                  <div class="proj-info">
+                    <a id="profile-link" href="./cashRegProj/cashReg.html" target="_blank">
                     Cash Regester Project
                    </a>
-                </div>
-                <div class="col">
-                  <a id="profile-link" href="./pokSearchPage/pokSearch.html" target="_blank">
-                    Pokemon Search Project
-                   </a>
-                </div>
-              </div>
+                  </div>
+                  <div class="proj-img"></div>
+                </li>
+                <li>
+                  <div class="proj-info">
+                    <a id="profile-link" href="./pokSearchPage/pokSearch.html" target="_blank">
+                      Pokemon Search Project
+                     </a>
+                  </div>
+                  <div class="proj-img"></div>
+                </li>
+              </ul>
+              <!-- end of section -->
               </div>
               </section>
               <section id="my-contacts">
+                <div class="container ">
+                  <h2>Feel free to contact me!</h2>
+                                    <div class="my-contacts">
+          <div class="contact-form">
+            <form action="">
+              <label for="name">Enter your name: </label>
+              <input id="name" type="text">
+              <label for="email">Enter your email: </label>
+              <input id="email" type="email">
+              <label for="message">Enter your message: </label>
+              <textarea name="" id="message"></textarea>
+
+              <button>Send</button>
+            </form>
+          </div>
+          <div class="get-wisdom">
+            <p>Press this button and get wisdom.</p>
+            <button>Click me!</button>
+            <div class="wisdom-wrap"><p></p></div>
+            
+          </div>
+        </div>
+                </div>
               </section>
     </main>
     <footer>

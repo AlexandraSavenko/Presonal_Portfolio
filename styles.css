@@ -15,11 +15,7 @@
     } 
     body{width: 100%;
     height: 100vh;
-    background: linear-gradient(
-      var(--flat-white),
-      var(--latte),
-      var(--cappuchino)
-    );
+    background-color: #9b7960;
     }
     section{
       height: 100vh;
@@ -116,24 +112,114 @@ align-items: center;
      }
     
     #projects{
-       height: 100vh;
+       height: auto;
        }
        #projects h2{
         color: var(--chocolate);
        }
+       .proj-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+       }
+       #projects .proj-list li {
+        width: 20vw;
+        height: 200px;
+        position: relative;
+       }
+       .proj-info{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        padding: 20px;
+       }
+       .proj-img{
+        width: 100%;
+        height: 100%;
+        background-color: aquamarine;
+        position: absolute;
+        top: 0;
+       }
+       .proj-img:hover{
+        display: none;
+       }
 #projects a{
+  font-size: 2em;
   color: var(--chocolate)
 }
     
-     /* #my-contacts{
-       background-color: black;
-       color: white;
-       height: 100vh;
-       width: 100%;
-     } */
-    
+/* contact me section */
+.my-contacts {
+  width: 100%;
+  display: flex;
+  gap: 10%;
+}
 
-    
+.contact-form{
+  width: 40%;
+  height: auto;
+  padding: 10px;
+}
+
+    .contact-form form{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-form form label{
+      display: block;
+      color: var(--chocolate);
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .contact-form form input, .contact-form form textarea {
+      padding: 10px 20px;
+      background-color: var(--flat-white);
+      border: none;
+      border-radius: 5px;
+    }
+
+    .get-wisdom{
+      width: 40%;
+      height: auto;
+      padding: 10px;
+    }
+    .get-wisdom p{
+      text-align: center;
+      color: var(--chocolate);
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .contact-form form button, .get-wisdom button {
+  display: block;
+  margin: 10px auto;
+  background-color: var(--chocolate);
+  color: var(--flat-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+    }
+    .wisdom-wrap{
+      width: 80%;
+      height: 200px;
+      background-color: #cbc19b;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    @media screen and (max-width: 900px) {
+      .my-contacts {
+        flex-direction: column;
+      }
+      .contact-form{
+        width: 100%;
+      }
+      .get-wisdom{
+        width: 100%;
+      }
+    }
     footer{
      background: radial-gradient(
       ellipse at 70%,
