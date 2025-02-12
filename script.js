@@ -1,17 +1,23 @@
-// function foo (n, x) {
-//   let acc = 0;
-// for (let i = 0; i <= n; i++){
-// x % i === 0 ? acc += 1 : acc;
-// }
-// return acc;
-// }
+const wisdomBtn = document.getElementById("wisdom-btn")
+const wisdomQuote = document.getElementById("wisdom-quote")
+const wisdomAuthor = document.getElementById("wisdom-author")
 
-function foo(n, x){
-  let acc = 0;
-  if(n === 0){
-    return acc
-  }else(
-    x % foo
-  )
+wisdomBtn.addEventListener("click", ()=> {getRandomWisdom()})
+
+const getRandomWisdom = async () => {
+  try {
+    const res = await fetch('https://dummyjson.com/quotes/random')
+if(!res.ok) throw new Error ("HTTP error!")
+
+  const data = await res.json()
+  showWisdom(data.quote, data.author)
+console.log(data.author)
+  } catch (error) {
+    console.log(error)
+  }
 }
-console.log(foo(10, 20))
+
+const showWisdom = (quote, author) => {
+  wisdomQuote.textContent = quote;
+  wisdomAuthor.textContent = author;
+}
